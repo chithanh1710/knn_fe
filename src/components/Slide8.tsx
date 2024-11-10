@@ -72,7 +72,7 @@ export default function Slide8() {
       <Animation>
         <Image
           alt="Image"
-          src="/images/familyTreeIMG.avif"
+          src="/images/familyTreeIMG.webp"
           width={500}
           height={1000}
           className="rounded-lg mix-blend-darken"
