@@ -33,7 +33,7 @@ export default function Slide7() {
           alt="Image"
           src="/images/bmiIMG.webp"
           width={500}
-          height={1000}
+          height={650}
           className="rounded-lg"
         />
       </Animation>

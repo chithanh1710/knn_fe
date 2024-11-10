@@ -74,8 +74,9 @@ export default function Slide8() {
           alt="Image"
           src="/images/familyTreeIMG.webp"
           width={500}
-          height={1000}
+          height={650}
           className="rounded-lg mix-blend-darken"
+          quality={50}
         />
       </Animation>
     </div>
