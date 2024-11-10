@@ -16,7 +16,7 @@ export async function submitForm(formData: FormData) {
 
   const name = formData.get("name");
 
-  let redirectPath;
+  let redirectPath = "#";
   try {
     // Gửi yêu cầu POST đến API
     const res = await fetch(URL + "predict", {
@@ -37,11 +37,10 @@ export async function submitForm(formData: FormData) {
     console.log("Response Data:", data);
 
     redirectPath = `/result?rs=${data.prediction}&name=${name}`;
-
-    redirect(redirectPath);
   } catch (error) {
-    // Xử lý lỗi trong trường hợp fetch hoặc phân tích dữ liệu gặp sự cố
     console.error("Fetch error:", error);
     throw error;
+  } finally {
+    redirect(redirectPath);
   }
 }
