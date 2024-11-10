@@ -1,4 +1,5 @@
 import { submitForm } from "@/services/actions";
+import ButtonSubmit from "./ButtonSubmit";
 
 export default function page() {
   return (
@@ -111,12 +112,7 @@ export default function page() {
         />
       </div>
 
-      <button
-        type="submit"
-        className="w-full py-2 px-4 bg-#26A687 text-white rounded-md font-semibold"
-      >
-        Gửi
-      </button>
+      <ButtonSubmit />
     </form>
   );
 }

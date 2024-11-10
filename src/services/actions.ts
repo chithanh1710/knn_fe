@@ -1,8 +1,7 @@
 "use server";
-
-const URL = process.env.URL || "http://127.0.0.1:5000/predict";
-
 import { redirect } from "next/navigation";
+
+const URL = process.env.URL || "http://127.0.0.1:5000";
 
 export async function submitForm(formData: FormData) {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,7 +19,7 @@ export async function submitForm(formData: FormData) {
   let redirectPath;
   try {
     // Gửi yêu cầu POST đến API
-    const res = await fetch(URL, {
+    const res = await fetch(URL + "predict", {
       method: "POST",
       body: JSON.stringify(json),
       headers: {
@@ -38,13 +37,11 @@ export async function submitForm(formData: FormData) {
     console.log("Response Data:", data);
 
     redirectPath = `/result?rs=${data.prediction}&name=${name}`;
+
+    redirect(redirectPath);
   } catch (error) {
     // Xử lý lỗi trong trường hợp fetch hoặc phân tích dữ liệu gặp sự cố
     console.error("Fetch error:", error);
-    redirectPath = `#`;
-  } finally {
-    if (redirectPath) {
-      redirect(redirectPath);
-    }
+    throw error;
   }
 }
