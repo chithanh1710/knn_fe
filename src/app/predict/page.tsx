@@ -17,6 +17,7 @@ export default function page() {
           type="text"
           name="name"
           className="mt-1 p-2 border border-gray-300 rounded-md w-full"
+          required
         />
       </div>
 
@@ -28,6 +29,7 @@ export default function page() {
             name="Age"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             min={0}
+            required
           />
         </div>
         <div>
@@ -38,6 +40,7 @@ export default function page() {
             step="0.1"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             min={0}
+            required
           />
         </div>
       </div>
@@ -51,6 +54,7 @@ export default function page() {
           name="Pregnancies"
           className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           min={0}
+          required
         />
       </div>
 
@@ -64,6 +68,7 @@ export default function page() {
             name="Insulin"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             min={0}
+            required
           />
         </div>
         <div>
@@ -75,6 +80,7 @@ export default function page() {
             name="Glucose"
             className="mt-1 p-2 border border-gray-300 rounded-md w-full"
             min={0}
+            required
           />
         </div>
       </div>
@@ -86,6 +92,7 @@ export default function page() {
           name="BloodPressure"
           className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           min={0}
+          required
         />
       </div>
 
@@ -96,6 +103,7 @@ export default function page() {
           name="SkinThickness"
           className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           min={0}
+          required
         />
       </div>
 
@@ -109,6 +117,7 @@ export default function page() {
           step="0.01"
           className="mt-1 p-2 border border-gray-300 rounded-md w-full"
           min={0}
+          required
         />
       </div>
 
