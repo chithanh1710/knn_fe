@@ -18,17 +18,14 @@ const SpaceGrotesk = Space_Grotesk({
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: ReactNode;
-  modal: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${SpaceGrotesk.variable} antialiased`}>
         <Header />
         {children}
-        {modal}
         <Footer />
       </body>
     </html>
